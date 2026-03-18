@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Èric Moral Pereira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Èric Moral</div>
+            <ul class="nav-menu">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#estudios">Estudios</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <div class="profile-img-wrap">
+                        <img src="imagenes/foto-perfil.png" alt="Foto de Èric Moral Pereira" class="profile-img">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="name">Èric Moral Pereira</h1>
+                    <h2 class="title">Técnico en Desarrollo de Aplicaciones Multiplataforma</h2>
+                    <p class="tagline">Estudiante vocacional de informática con pasión por el software y la ciberseguridad.</p>
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn btn-primary">Contactar</a>
+                        <a href="tu-cv.pdf" target="_blank" class="btn btn-secondary">Descargar CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="section about-section">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Soy un estudiante apasionado por la informática y la programación, con un fuerte interés en el desarrollo de software y la ciberseguridad. Mi enfoque combina la formación académica rigurosa con un aprendizaje autodidacta constante.</p>
+                </div>
+                <div class="languages">
+                    <h3>Idiomas</h3>
+                    <ul>
+                        <li><strong>Español:</strong> Nativo</li>
+                        <li><strong>Catalán:</strong> Nativo</li>
+                        <li><strong>Inglés:</strong> B2 (Trinity College London)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="estudios" class="section education-section">
+            <h2 class="section-title">Formación Académica</h2>
+            <div class="timeline">
+                <article class="education-card">
+                    <span class="date">Actualmente</span>
+                    <h3>CFGS: Desarrollo de Aplicaciones Multiplataforma</h3>
+                    <p class="institution">ITB (Institut Tecnològic de Barcelona)</p>
+                    <ul class="skills-list">
+                        <li>Kotlin, Java, Android Studio</li>
+                        <li>POO, PostgreSQL, APIs REST</li>
+                        <li>Git, JavaScript</li>
+                    </ul>
+                </article>
+                <article class="education-card">
+                    <span class="date">2023 - 2025</span>
+                    <h3>CFGM: Sistemas Microinformáticos y Redes</h3>
+                    <p class="institution">ITB - <strong>Matrícula de Honor</strong></p>
+                    <ul class="skills-list">
+                        <li>Sistemas (Windows, Linux, AD)</li>
+                        <li>Redes (Subnetting, DNS, DHCP)</li>
+                        <li>Python, HTML/CSS, WordPress</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="experiencia" class="section experience-section">
+            <h2 class="section-title">Experiencia</h2>
+            <article class="job-card">
+                <div class="job-header">
+                    <h3>Prácticas Erasmus+ (Italia)</h3>
+                    <span class="company">Marchignoli.com</span>
+                    <span class="date">Octubre 2024</span>
+                </div>
+                <p>Servicios IT en Bologna, Italia.</p>
+                <ul>
+                    <li>Mantenimiento de hardware e instalación de software.</li>
+                    <li>Instalación de infraestructura de red (Patch Panels, salas de reuniones).</li>
+                    <li>Optimización de scripts en Python.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="proyectos" class="section projects-section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="imagenes/ITBrawl-logo.png" alt="Preview ITBrawl">
+                    </div>
+                    <div class="project-info">
+                        <h3>ITBrawl</h3>
+                        <p>Videojuego de lucha desarrollado en Unity y C# como proyecto final de CFGM.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/ElCire12/ITBrawl" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="imagenes/better-than-over-height.jpg" alt="Preview Better Than Over Height">
+                    </div>
+                    <div class="project-info">
+                        <h3>Better Than Over Height</h3>
+                        <p>Juego creado para la Videogame JAM "Tu juego a juicio" en solo dos semanas.</p>
+                        <div class="project-links">
+                            <a href="https://elcire12.itch.io/better-than-over-height" target="_blank">Ver en Itch.io</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="eventos" class="section events-section">
+            <h2 class="section-title">Hackatones y Eventos</h2>
+            <div class="events-list">
+                <div class="event-item">
+                    <span class="event-date">2026</span>
+                    <p><strong>XVIII CodeJam (2º Puesto):</strong> Concurso de programación en Institut Sabadell.</p>
+                </div>
+                <div class="event-item">
+                    <span class="event-date">2025</span>
+                    <p><strong>24 Hores d'Innovació (Ganadores):</strong> Reto Biosfer Teslab, prototipado de app médica en Figma.</p>
+                </div>
+                <div class="event-item">
+                    <span class="event-date">2024</span>
+                    <p><strong>HP CodeWars Barcelona:</strong> Competición de programación utilizando Python.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills-extra">
+            <h2 class="section-title">Aprendizaje Autodidacta</h2>
+            <div class="skills-tags">
+                <span>Hack The Box</span>
+                <span>Hack4u.io</span>
+                <span>DockerLabs</span>
+                <span>Unity / C#</span>
+                <span>Ciberseguridad</span>
+                <span>Scratch (Voluntariado)</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="footer">
+        <h2 class="section-title">¿Hablamos?</h2>
+        <div class="footer-content">
+            <p>Email: <a href="mailto:ericmoralpereira@gmail.com">ericmoralpereira@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/eric-moral-pereira" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ElCire12" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <p class="copy">&copy; 2026 Èric Moral Pereira</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
