@@ -372,13 +372,22 @@ body::before {
 /* ════════════════════════════════════════════════════════
    ABOUT
    ════════════════════════════════════════════════════════ */
-.about-section { border-top: 1px solid var(--border); }
+.about-section {
+  border-top: 1px solid var(--border);
+  /* Override .section padding-top to let grid control spacing */
+}
 
+/* El grid ahora ocupa todo el ancho de la sección, incluyendo el título */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: start;
+}
+
+/* Columna izquierda: título + texto */
+.about-left .section-title {
+  margin-bottom: 2rem;
 }
 
 .about-text p {
@@ -387,12 +396,19 @@ body::before {
   line-height: 1.9;
 }
 
+/* Columna derecha: idiomas alineados con el título */
+.languages {
+  padding-top: 2rem;
+}
+
 .languages h3 {
   font-family: var(--font-display);
   font-size: 1.4rem;
   letter-spacing: 0.08em;
   color: var(--white);
   margin-bottom: 1rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .languages ul { display: flex; flex-direction: column; gap: 0.6rem; }
@@ -477,6 +493,10 @@ body::before {
   font-size: 0.8rem;
   color: var(--muted);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .skills-list {
@@ -497,6 +517,29 @@ body::before {
 }
 .skills-list li:hover { background: rgba(184, 255, 61, 0.18); }
 
+/* ── Matrícula de Honor badge ───────────────────────────── */
+.honor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f5c842;
+  background: rgba(245, 200, 66, 0.1);
+  border: 1px solid rgba(245, 200, 66, 0.4);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  vertical-align: middle;
+  box-shadow: 0 0 10px rgba(245, 200, 66, 0.18);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+.honor-badge:hover {
+  background: rgba(245, 200, 66, 0.18);
+  box-shadow: 0 0 18px rgba(245, 200, 66, 0.3);
+}
+
 /* ════════════════════════════════════════════════════════
    EXPERIENCE
    ════════════════════════════════════════════════════════ */
@@ -506,38 +549,41 @@ body::before {
   background: var(--bg-2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem 2.2rem;
-  position: relative;
-  overflow: hidden;
+  padding: 1.8rem 2rem;
   transition: border-color var(--transition);
-}
-.job-card::before {
-  content: 'IT';
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: var(--font-display);
-  font-size: 7rem;
-  color: rgba(255,255,255,0.02);
-  pointer-events: none;
-  line-height: 1;
 }
 .job-card:hover { border-color: var(--lime-dim); }
 
-.job-header {
+/* Fila superior: logo + meta + fecha/ubicación */
+.job-top {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.7rem 1.2rem;
-  margin-bottom: 1rem;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
-.job-header h3 {
+.job-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.job-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.job-meta h3 {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   letter-spacing: 0.04em;
   color: var(--white);
+  line-height: 1.1;
 }
 
 .company {
@@ -547,36 +593,54 @@ body::before {
   text-transform: uppercase;
 }
 
-.job-header .date {
-  font-size: 0.7rem;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-  margin-left: auto;
-}
-
-.job-card > p {
-  font-size: 0.87rem;
-  color: #8aa0a6;
-  margin-bottom: 1rem;
-}
-
-.job-card ul {
+.job-right {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.job-dates {
+  font-size: 0.75rem;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.job-location {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* Descripción */
+.job-desc {
+  font-size: 0.87rem;
+  color: #8aa0a6;
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+/* Tags */
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
-.job-card ul li {
-  font-size: 0.83rem;
+.job-tags span {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
   color: var(--muted);
-  padding-left: 1.2rem;
-  position: relative;
-  line-height: 1.6;
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--bg-3);
+  transition: color var(--transition), border-color var(--transition);
 }
-.job-card ul li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--lime);
+.job-card:hover .job-tags span {
+  color: var(--white);
+  border-color: rgba(184, 255, 61, 0.25);
 }
 
 /* ════════════════════════════════════════════════════════
@@ -629,7 +693,16 @@ body::before {
   font-size: 1.6rem;
   letter-spacing: 0.04em;
   color: var(--white);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-date {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 0.6rem;
 }
 
 .project-info p {
