@@ -7,9 +7,9 @@
   'use strict';
 
   /* ── DOM refs ─────────────────────────────────────────── */
-  const header    = document.querySelector('.header');
-  const navLinks  = document.querySelectorAll('.nav-menu a');
-  const sections  = document.querySelectorAll('section[id], footer[id]');
+  const header = document.querySelector('.header');
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  const sections = document.querySelectorAll('section[id], footer[id]');
   const revealEls = document.querySelectorAll('.section, .education-card, .project-card, .event-item, .job-card');
 
   /* ── 1. Navbar — scrolled state ──────────────────────── */
@@ -46,7 +46,7 @@
 
   /* ── 4. Mobile hamburger menu ─────────────────────────── */
   const hamburger = document.querySelector('.hamburger');
-  const navMenu   = document.querySelector('.nav-menu');
+  const navMenu = document.querySelector('.nav-menu');
 
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {

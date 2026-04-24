@@ -65,7 +65,6 @@
                     </ul>
                 </div>
 
-                <!-- Redes sociales -->
                 <div class="about-socials">
                     <a href="https://github.com/ElCire12" target="_blank" class="social-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
@@ -94,8 +93,8 @@
                     <ul class="skills-list">
                         <li>Kotlin, Java, Android Studio</li>
                         <li>POO, PostgreSQL, APIs REST</li>
-                        <li>JavaScript, Node.js, Express</li> 
-                        <li>Git</li> 
+                        <li>JavaScript, Node.js, Express</li>
+                        <li>Git</li>
                     </ul>
                 </article>
                 <article class="education-card">
@@ -136,35 +135,84 @@
             </article>
         </section>
 
+        <!-- ── PROYECTOS ──────────────────────────────────────── -->
         <section id="proyectos" class="section projects-section">
             <h2 class="section-title">Proyectos Destacados</h2>
             <div class="projects-grid">
+
                 <article class="project-card">
                     <div class="project-img">
                         <img src="imagenes/ITBrawl-logo.png" alt="Preview ITBrawl">
+                        <div class="project-overlay">
+                            <span class="project-stat">Proyecto Final CFGM</span>
+                        </div>
                     </div>
                     <div class="project-info">
-                        <h3>ITBrawl</h3>
-                        <span class="project-date">Abril 2025</span>
-                        <p>Videojuego de lucha desarrollado en Unity y C# como proyecto final de CFGM.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/ElCire12/ITBrawl" target="_blank">GitHub</a>
+                        <div class="project-header">
+                            <h3>ITBrawl</h3>
+                            <span class="project-date">Abril 2025</span>
+                        </div>
+                        <p class="project-desc">Videojuego de lucha para aprender <span>programación orientada a objetos</span>. Apliqué herencia, polimorfismo y máquinas de estado para la creación de personajes. Simulamos un entorno de trabajo en equipo real, donde habia un artista, diseñador y programador (yo).</p>
+                        <ul class="project-highlights">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Arquitectura orientada a objetos con patrones reales
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                State machines para lógica de combate y animaciones
+                            </li>
+                        </ul>
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>POO</span>
+                                <span>State Machine</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ElCire12/ITBrawl" target="_blank">GitHub →</a>
+                            </div>
                         </div>
                     </div>
                 </article>
+
                 <article class="project-card">
                     <div class="project-img">
                         <img src="imagenes/better-than-over-height.jpg" alt="Preview Better Than Over Height">
+                        <div class="project-overlay">
+                            <span class="project-stat">#53 / 500+ proyectos</span>
+                        </div>
                     </div>
                     <div class="project-info">
-                        <h3>Better Than Over Height</h3>
-                        <span class="project-date">Agosto 2021</span>
-                        <p>Juego creado para la Videogame JAM "Tu juego a juicio" en solo dos semanas.</p>
-                        <div class="project-links">
-                            <a href="https://elcire12.itch.io/better-than-over-height" target="_blank">JUGAR</a>
+                        <div class="project-header">
+                            <h3>Better Than Over Height</h3>
+                            <span class="project-date">Agosto 2021</span>
+                        </div>
+                        <p class="project-desc">Mi primer juego publicado. Dos semanas, una JAM y más de 500 competidores. Acabé en el puesto #53, aprendiendo que la gestión del tiempo y tomar decisiones rápidas bajo presión son tan importantes como el código.</p>
+                        <ul class="project-highlights">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Top 11% — "Tu juego a juicio" Videogame JAM
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Desarrollado íntegramente en 14 días
+                            </li>
+                        </ul>
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>Game JAM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://elcire12.itch.io/better-than-over-height" target="_blank">Jugar →</a>
+                            </div>
                         </div>
                     </div>
                 </article>
+
             </div>
         </section>
 
@@ -188,12 +236,14 @@
 
         <section class="section skills-extra">
             <h2 class="section-title">Aprendizaje Autodidacta</h2>
+
+            <p>En mi tiempo libre disfruto aprendiendo e investigando, con tecnologias y conocimientos como las siguientes:</p>
             <div class="skills-tags">
                 <span>Hack The Box</span>
                 <span>Hack4u.io</span>
                 <span>DockerLabs</span>
-                <span>Unity / C#</span>
-                <span>Ciberseguridad</span>
+                <span>Unity & C#</span>
+                <span>Ciberseguridad / Pentesting</span>
                 <span>Scratch (Voluntariado)</span>
             </div>
         </section>
