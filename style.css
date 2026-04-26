@@ -676,7 +676,7 @@ body::before {
 }
 
 /* ════════════════════════════════════════════════════════
-   EXPERIENCE
+   EXPERIENCE — mejorada
    ════════════════════════════════════════════════════════ */
 .experience-section {
   border-top: 1px solid var(--border);
@@ -694,24 +694,43 @@ body::before {
   border-color: var(--lime-dim);
 }
 
+/* Cabecera */
 .job-top {
   display: flex;
   align-items: flex-start;
   gap: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.job-logo-wrap {
+  position: relative;
+  flex-shrink: 0;
 }
 
 .job-logo {
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid var(--border);
-  flex-shrink: 0;
+  display: block;
+}
+
+.job-flag {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  font-size: 14px;
+  line-height: 1;
+  background: var(--bg-2);
+  border-radius: 50%;
+  padding: 2px;
 }
 
 .job-meta {
   flex: 1;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -719,10 +738,14 @@ body::before {
 
 .job-meta h3 {
   font-family: var(--font-display);
-  font-size: 1.7rem;
+  font-size: 1.75rem;
   letter-spacing: 0.04em;
   color: var(--white);
   line-height: 1.1;
+}
+
+.job-highlight {
+  color: var(--lime);
 }
 
 .company {
@@ -732,11 +755,27 @@ body::before {
   text-transform: uppercase;
 }
 
+.erasmus-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f5c842;
+  background: rgba(245, 200, 66, 0.1);
+  border: 1px solid rgba(245, 200, 66, 0.35);
+  padding: 0.22rem 0.65rem;
+  border-radius: 2px;
+  width: fit-content;
+}
+
 .job-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.2rem;
+  gap: 0.25rem;
   flex-shrink: 0;
 }
 
@@ -753,11 +792,149 @@ body::before {
   letter-spacing: 0.06em;
 }
 
-.job-desc {
-  font-size: 0.87rem;
+.job-duration {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lime-dim);
+  background: rgba(184, 255, 61, 0.06);
+  border: 1px solid rgba(184, 255, 61, 0.15);
+  padding: 0.28rem 0.75rem;
+  border-radius: 2px;
+  margin-top: 0.1rem;
+}
+
+.job-divider {
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 1.5rem;
+}
+
+/* Grid de tareas */
+.job-tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-box {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 0.9rem;
+  transition: border-color var(--transition), transform var(--transition);
+  cursor: default;
+}
+
+.task-box:hover {
+  border-color: rgba(184, 255, 61, 0.35);
+  transform: translateY(-3px);
+}
+
+.task-icon {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.task-cat {
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.task-label {
+  font-size: 0.75rem;
+  color: var(--white);
+  line-height: 1.45;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.task-sub {
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Proyecto destacado */
+.job-featured {
+  border: 1px solid rgba(184, 255, 61, 0.25);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  background: rgba(184, 255, 61, 0.03);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.4rem;
+}
+
+.job-featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lime) 40%, var(--lime) 60%, transparent);
+}
+
+.job-featured__label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.job-featured__title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.job-featured__desc {
+  font-size: 0.8rem;
   color: #8aa0a6;
   line-height: 1.75;
-  margin-bottom: 1.2rem;
+}
+
+.job-featured__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+.job-featured__tags span {
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lime);
+  background: rgba(184, 255, 61, 0.08);
+  border: 1px solid rgba(184, 255, 61, 0.2);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+
+/* Habilidades */
+.job-skills-row {
+  margin-bottom: 1.4rem;
+}
+
+.job-skills-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.6rem;
 }
 
 .job-tags {
@@ -780,6 +957,67 @@ body::before {
 .job-card:hover .job-tags span {
   color: var(--white);
   border-color: rgba(184, 255, 61, 0.25);
+}
+
+/* Pie con ciudades */
+.job-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.job-cities {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.job-cities__label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 0.2rem;
+}
+
+.job-city {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.68rem;
+  color: var(--muted);
+  transition: color var(--transition);
+  cursor: default;
+}
+
+.job-city::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.job-city:hover {
+  color: var(--white);
+}
+
+.job-city:hover::before {
+  background: var(--lime);
+}
+
+.job-footer-note {
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
 }
 
 /* ════════════════════════════════════════════════════════
@@ -1289,8 +1527,8 @@ body::before {
     grid-template-columns: 1fr;
   }
 
-  .job-header .date {
-    margin-left: 0;
+  .job-tasks-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1375,10 +1613,24 @@ body::before {
   .contact-card__value {
     font-size: 0.75rem;
   }
+
+  .job-tasks-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .job-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
 }
 
 @media (max-width: 400px) {
   .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .job-tasks-grid {
     grid-template-columns: 1fr;
   }
 }
