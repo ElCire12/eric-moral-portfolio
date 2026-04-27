@@ -344,10 +344,6 @@ body::before {
   transition: filter 0.4s ease;
 }
 
-.profile-img:hover {
-  filter: grayscale(0%) contrast(1.12);
-}
-
 .hero-text {
   padding-left: 0.5rem;
 }
@@ -1300,6 +1296,14 @@ body::before {
   color: var(--bg);
   border-color: var(--lime);
   opacity: 1;
+}
+
+.project-highlight {
+  color: var(--lime);
+  /* background: rgba(184, 255, 61, 0.12); Color --lime (#b8ff3d) con 12% de opacidad */
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  font-weight: 400;
 }
 
 /* ════════════════════════════════════════════════════════
